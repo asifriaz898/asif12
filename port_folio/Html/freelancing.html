@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelancing | Muhammad Asif Riaz</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- AOS & Google Fonts -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            transition: background 0.4s ease, color 0.4s ease;
+        }
+
+        .navbar {
+            background: rgba(20, 30, 48, 0.8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0, 234, 255, 0.15);
+        }
+
+        .navbar-brand {
+            font-family: 'Orbitron', sans-serif;
+            color: #00eaff !important;
+            text-shadow: 0 0 10px #00eaff;
+        }
+
+        .nav-link {
+            color: #eee !important;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(0, 234, 255, 0.1);
+            color: #00eaff !important;
+            box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+        }
+
+        .freelancing-banner {
+            background: url('/images/free.png') no-repeat center center;
+            background-size: cover;
+            padding: 120px 0;
+            text-align: center;
+            color: #fff;
+            border-bottom: 5px solid #00eaff;
+            animation: bannerFadeIn 2s ease-in-out;
+            position: relative;
+        }
+
+        @keyframes bannerFadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .freelancing-banner h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 15px rgba(0, 234, 255, 0.7);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .freelancing-banner p {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        .freelancing-services {
+            padding: 80px 0;
+            text-align: center;
+            background-color: #f9f9f9;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .freelancing-services h2 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 234, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            height: 100%;
+            position: relative;
+            animation: cardHover 0.3s ease-in-out;
+        }
+
+        @keyframes cardHover {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 234, 255, 0.2);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            padding: 25px;
+            color: #555;
+        }
+
+        .card-title {
+            font-size: 1.75rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer {
+            background-color: #000;
+            color: #888;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .dark-mode footer {
+            background-color: #f8f9fa;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .freelancing-banner h1 {
+                font-size: 2.8rem;
+            }
+
+            .freelancing-services h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MyPortfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/Html/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/gathering.html">Gathering</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/freelancing.html">Freelancing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/career-guide.html">Career Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/contact.html">Contact</a></li>
+                    <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle Theme">🌓</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="freelancing-banner">
+        <h1>Freelancing Services</h1>
+        <p>Explore the services I offer for your next project or business venture!</p>
+    </section>
+
+    <!-- Freelancing Services Section -->
+    <section class="freelancing-services">
+        <h2>Services I Provide</h2>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Service Cards -->
+                <div class="col-md-4">
+                    <div class="card service-card" data-aos="fade-up">
+                        <img src="/images/Frontend-Developer.webp" alt="Web Development">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">Custom websites that are responsive, fast, and visually appealing. I
+                                work with the latest technologies like HTML, CSS, JavaScript, and more!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="/images/app.png" alt="App Development">
+                        <div class="card-body">
+                            <h5 class="card-title">App Development</h5>
+                            <p class="card-text">I build dynamic mobile applications with smooth user experiences using
+                                frameworks like React Native and Flutter.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="/images/pyt.jpg" alt="Python Development">
+                        <div class="card-body">
+                            <h5 class="card-title">Python Development</h5>
+                            <p class="card-text">From data analysis to building APIs, I provide Python-based solutions
+                                tailored to your business needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="/images/seo.png" alt="SEO Services">
+                        <div class="card-body">
+                            <h5 class="card-title">SEO Services</h5>
+                            <p class="card-text">Improve your website's search engine ranking with my SEO optimization
+                                services, ensuring maximum visibility and traffic.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card" data-aos="fade-up" data-aos-delay="400">
+                        <img src="/images/ui.jpg" alt="UI/UX Design">
+                        <div class="card-body">
+                            <h5 class="card-title">UI/UX Design</h5>
+                            <p class="card-text">I create intuitive and aesthetically pleasing user interfaces to
+                                enhance user satisfaction and engagement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Muhammad Asif Riaz. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+
+</html>

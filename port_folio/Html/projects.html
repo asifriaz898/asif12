@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Muhammad Asif Riaz</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- AOS & Google Fonts -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            transition: background 0.4s ease, color 0.4s ease;
+        }
+
+        .navbar {
+            background: rgba(20, 30, 48, 0.8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0, 234, 255, 0.15);
+        }
+
+        .navbar-brand {
+            font-family: 'Orbitron', sans-serif;
+            color: #00eaff !important;
+            text-shadow: 0 0 10px #00eaff;
+        }
+
+        .nav-link {
+            color: #eee !important;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(0, 234, 255, 0.1);
+            color: #00eaff !important;
+            box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+        }
+
+        .projects-banner {
+            background: url('/images/proj.png') no-repeat center center;
+            background-size: cover;
+            padding: 120px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .projects-banner h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        .projects-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .projects-section h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .project-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 15px;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 234, 255, 0.15);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 45px rgba(0, 234, 255, 0.2);
+        }
+
+        .project-card-content {
+            padding: 20px;
+        }
+
+        .project-card-content h3 {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .project-card-content p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .project-card-content a {
+            font-size: 1.1rem;
+            color: #00eaff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .project-card-content a:hover {
+            text-decoration: underline;
+        }
+
+        .quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #444;
+            margin-top: 50px;
+        }
+
+        footer {
+            background-color: #000;
+            color: #888;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .dark-mode footer {
+            background-color: #f8f9fa;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .projects-banner h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MyPortfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/Html/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/gathering.html">Gathering</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/freelancing.html">Freelancing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/career-guide.html">Career Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/contact.html">Contact</a></li>
+                </ul>
+                <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle Theme">🌓</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="projects-banner">
+        <h1>My Projects</h1>
+        <p>Explore the projects I've worked on, showcasing my skills and experience!</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <h2>Featured Projects</h2>
+        <div class="project-cards">
+            <!-- Project Card 1 -->
+            <div class="project-card" data-aos="fade-up">
+                <img src="/images/Frontend-Developer.webp" alt="Front end">
+                <div class="project-card-content">
+                    <h3>Front End</h3>
+                    <p>Responsive Portfolio Website
+                        Description: A visually appealing and interactive portfolio website built with HTML, CSS, and
+                        JavaScript. The site features a modern design with a 3D animated navbar, dark mode toggle,
+                        smooth scroll effects, and a dynamic skills section with animated progress bars. The site is
+                        fully responsive, ensuring a seamless experience across desktops, tablets, and mobile devices.
+                        It also incorporates advanced features like Typed.js for typing animations and AOS for smooth
+                        scroll animations.
+
+                        Technologies: HTML, CSS, JavaScript, Bootstrap, AOS, Typed.js, GSAP</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card" data-aos="fade-up">
+                <img src="/images/backend.jpg" alt="back end">
+                <div class="project-card-content">
+                    <h3>Back end</h3>
+                    <p>Full-Stack Web Application
+                        Description: A full-stack web application built using Node.js, Express.js, and MongoDB. The
+                        application allows users to register, log in, and manage their personal data with secure
+                        authentication. It uses RESTful APIs to handle CRUD operations, ensuring smooth interaction
+                        between the front-end and back-end. The back-end is optimized for performance and security, with
+                        data validation, user authentication (JWT), and error handling mechanisms in place. This project
+                        demonstrates how to build a scalable and secure back-end for modern web applications.
+
+                        Technologies: Node.js, Express.js, MongoDB, JWT, RESTful APIs, Mongoose, Bcrypt</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card" data-aos="fade-up">
+                <img src="/images/pyt.jpg" alt="Python developer">
+                <div class="project-card-content">
+                    <h3>Python developer</h3>
+                    <p> Data Analysis and Visualization Tool
+                        Description: A Python-based data analysis and visualization tool that processes large datasets
+                        to provide meaningful insights. The project uses popular libraries such as Pandas for data
+                        manipulation, NumPy for numerical calculations, and Matplotlib and Seaborn for creating
+                        interactive and insightful visualizations. This tool can handle datasets from various sources
+                        (CSV, Excel, APIs) and outputs interactive graphs and statistics, making it easy for users to
+                        explore trends and patterns. It’s perfect for data analysts and decision-makers who need to
+                        quickly analyze and visualize data.
+
+                        Technologies: Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook.</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <p class="quote">"Great projects come from great teamwork!"</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Muhammad Asif Riaz. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+
+</html>
